@@ -1,14 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Navya's Retail Store</title>  
+<script type='text/javascript'>
+!(function() {
+  
+  var analytics = (window.metarouter = window.metarouter || [])
+  if (!analytics.initialize) {
+    if (analytics.invoked) {
+      window.console && console.error && console.error('Analytics.js snippet included twice.')
+    } else {
+      analytics.invoked = !0
+      analytics.methods = [
+        'trackSubmit',
+        'trackClick',
+        'trackLink',
+        'trackForm',
+        'pageview',
+        'identify',
+        'reset',
+        'group',
+        'track',
+        'ready',
+        'alias',
+        'debug',
+        'page',
+        'once',
+        'off',
+        'on',
+        'addSourceMiddleware',
+        'addIntegrationMiddleware',
+        'setAnonymousId',
+        'addDestinationMiddleware',
+      ]
+      analytics.factory = function(e) {
+        return function() {
+          var t = Array.prototype.slice.call(arguments)
+          t.unshift(e)
+          analytics.push(t)
+          return analytics
+        }
+      }
+      for (var e = 0; e < analytics.methods.length; e++) {
+        var key = analytics.methods[e]
+        analytics[key] = analytics.factory(key)
+      }
+      analytics.load = function(key, e) {
+        var t = document.createElement('script')
+        t.type = 'text/javascript'
+        t.async = !0
+        t.src = ("https:"===document.location.protocol?"https://":"http://")+"navyayvan.github.io/mr_demo/"+key+".js"
+        var n = document.getElementsByTagName('script')[0]
+        n.parentNode.insertBefore(t, n)
+        analytics._loadOptions = e
+      }
+      analytics.SNIPPET_VERSION = '4.13.1'
+      analytics.load("navya_dev")
+      window.metarouter.page()
+    }
+  }
+})()
+</script>
 
-  <title>Can I Deploy MR? Y/N </title>
-  <script> </script>
-
-  <div>
-    <h1>what up</h1>
-  </div>
+  <style>
+    body { font-family: sans-serif; padding: 2rem; }
+    .product { border: 1px solid #ddd; padding: 1rem; margin-bottom: 1rem; }
+    .price { color: green; font-weight: bold; }
+  </style>
 </head>
+<body>
+  <h1>Welcome to My Retail Shop</h1>
+
+  <div class="product">
+    <h2>Product A</h2>
+    <p>Description of Product A.</p>
+    <p class="price">$19.99</p>
+  </div>
+
+  <div class="product">
+    <h2>Product B</h2>
+    <p>Description of Product B.</p>
+    <p class="price">$29.99</p>
+  </div>
+</body>
+</html>
