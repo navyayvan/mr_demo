@@ -107,7 +107,7 @@
       }
       analytics.SNIPPET_VERSION = '4.13.1'
       analytics.load("navya_dev")
-      window.metarouter.page()
+      window.metarouter.track("Page track", {})
     }
   }
 })()
@@ -119,7 +119,7 @@
   <h1>Navya's Retail Shop</h1>
 
   <div class="products">
-    <script> analytics.track("Product Viewed", {
+    <script> metarouter.track("Product Viewed", {
   product_id: "10101010",
   name: "Beach Dress"
 })</script>
